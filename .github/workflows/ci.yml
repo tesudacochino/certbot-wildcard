@@ -18,7 +18,7 @@ jobs:
         uses: docker/build-push-action@v4.0.0
         with:
           context: discordbot
-          file: discordbot/Dockerfile
+          file: Dockerfile
           push: true
           tags: |
             molero/certbot-wildcard:latest
