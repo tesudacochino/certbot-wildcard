@@ -29,7 +29,7 @@ if [ $? -eq 0 ]; then
   openssl pkcs12 -export -inkey "/etc/letsencrypt/archive/${DOMAIN#*.}/privkey1.pem" \
                   -in "/etc/letsencrypt/archive/${DOMAIN#*.}/fullchain1.pem" \
                   -out "/etc/letsencrypt/archive/${DOMAIN#*.}/websocket.pfx" \
-                  -name "LPSCert" \
+                  -name "websocket" \
                   -passout pass:
 
   echo "Archivo PFX generado: /etc/letsencrypt/${DOMAIN#*.}/websocket.pfx"
