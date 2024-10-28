@@ -17,7 +17,7 @@ jobs:
       - name: Build Docker image, Tag and Push Docker Image to Docker Hub.
         uses: docker/build-push-action@v4.0.0
         with:
-          context: discordbot
+          context: .
           file: Dockerfile
           push: true
           tags: |
