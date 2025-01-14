@@ -26,9 +26,9 @@ read -p "Presiona Enter cuando el registro esté listo..."
 if [ $? -eq 0 ]; then
   echo "Generando archivo PFX..."
   
-  openssl pkcs12 -export -inkey "/etc/letsencrypt/archive/${DOMAIN#*.}/privkey1.pem" \
-                  -in "/etc/letsencrypt/archive/${DOMAIN#*.}/fullchain1.pem" \
-                  -out "/etc/letsencrypt/archive/${DOMAIN#*.}/websocket.pfx" \
+  openssl pkcs12 -export -inkey "/etc/letsencrypt/live/${DOMAIN#*.}/privkey.pem" \
+                  -in "/etc/letsencrypt/live/${DOMAIN#*.}/fullchain.pem" \
+                  -out "/etc/letsencrypt/live/${DOMAIN#*.}/websocket.pfx" \
                   -name "websocket" \
                   -passout pass:
 
